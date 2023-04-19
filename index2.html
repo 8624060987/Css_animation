@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style type="text/css">
+        body{
+            /* border-left: 5px solid white ;
+            border-top: 5px solid green;
+            border-right: 5px solid white;
+            border-bottom: 5px solid orange; */
+            margin: 0px;
+            height: 500px;
+            border: 15px solid red;
+            border-color: white green white orange;
+            overflow-x: hidden;
+        }
+        main{
+            position: relative;
+            margin: auto;
+            width:500px ;
+            height: 70px;
+        } 
+        .text{
+            display:flex;
+            position: absolute;
+            /* margin: auto; */
+            left:20%;
+            justify-content: center;
+            font-size: 100px; 
+            color:black;
+            font-weight: bolder;
+            font-family: 'Times New Roman', Times, serif;
+            text-transform: uppercase;
+            /* padding: 15px; */
+            gap:15px;
+         }
+         .happy{
+            background-color: orange;
+         }
+         .indep {
+            background-color: white;
+         }
+         .day{
+            background-color: green;
+         }
+        .sky{
+            background-image: url(./sky.jpg);
+            height: 100vh;
+            width: 100%;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            overflow-x: hidden;
+            animation: sky 50s infinite linear;
+        }
+        .road{
+            width: 500%;
+            background-image: url(./road.jpg);
+            height: 200px;
+            display: block;
+            position: absolute;
+            overflow-x: hidden;
+            bottom:0px;
+            left: 0px;
+            z-index: 1;
+            background-repeat: repeat-x;
+            /* left:0px; */
+            animation: road1 5s infinite linear;
+        }
+    .city{
+            width: 500%;
+            height: 250px;
+            background-image: url(./city.png);
+            /* background-size: cover; */
+            background-repeat:repeat-x;
+            position: absolute;
+            display:block;
+            overflow-x:hidden;
+            bottom: 200px;
+            left: 0px;
+            right: 0px;
+            z-index: 1;
+            animation: city 5s infinite linear;
+            
+           
+        }  
+        .car{
+            width: 400px;
+            left: 30%;
+            bottom: 100px;
+            transform: translateX(-50%);
+            position: absolute;
+              z-index:2;
+          
+            animation: car1 1s infinite linear;
+           
+        }
+        .wheel{
+            position: absolute;
+            bottom:75px;
+            left:50%;
+            z-index: 2;
+            
+        }
+        .wheel1{
+            position: absolute;
+            left:-165px;
+            animation: wheel 1s infinite linear;
+        }
+        .wheel2{
+            position: absolute;
+          
+            left:80px;
+            animation: wheel 1s infinite linear; 
+        }
+        .flag{
+            position: absolute;
+            bottom:0px ;
+            /* right:-10px; */
+            left: 80px;
+
+            opacity:1;
+            z-index: 5;
+            /* animation: car1 20s infinite linear; */
+        }
+        .sun{
+            position: absolute;
+            top:200px;
+            left:80%;
+            animation: sun 50s   infinite linear;
+         }
+
+        @keyframes sky{
+            0%{
+                filter: brightness(70%);
+            }
+            20%{
+                filter: brightness(100%);
+            }
+            70%{
+                filter: brightness(90%);
+            }
+            100%{
+                filter: brightness(30%);
+               
+            }
+        }
+       
+
+        @keyframes road1{  
+            100%{
+               
+                transform : translateX(-3000px);
+            }
+        }
+
+        @keyframes  car1 {
+            0%{
+                transform: translateY(1px);
+            }
+            50%{
+                transform: translateY(-3px);
+            }
+            100%{
+                transform: translateY(1px);
+            }
+        } 
+      
+         @keyframes city{ 
+           100%{
+            transform:translateX(-1400px);
+        }
+        }
+
+        @keyframes  car1 {
+            0%{
+                transform: translateY(-1px);
+            }
+            50%{
+                transform: translateY(3px);
+            }
+            100%{
+                transform: translateY(-1px);
+            }
+        }
+        /* @keyframes  car1 {
+          
+            100%{
+                transform: translateX(3000px) ;
+            }
+           
+        }  */
+        @keyframes wheel{
+            100%{
+                transform: rotate(360deg);
+            }   
+   }  
+   
+       @keyframes sun{
+        0%{
+            top:200px;
+          
+        } 
+        50%{
+            top:80px;    
+        }
+        100%{
+            top:200px;
+            transform: rotate(-360deg);
+            transform: translateX(-2000px);
+
+        }
+        }
+      
+
+    </style>
+</head>
+<body>
+    <div class="main">
+        
+    <div class="sky">
+        <div class="text">
+            <div class="happy">Happy </div>
+            <div class="indep"> Indpendant</div>
+           <div class="day">Day</div>
+           </div>
+       <div class="road"></div>
+       <div class="city"></div>
+       <div class="sun">
+        <img src="./sun.png" alt="" width="150px" height="150px">
+       </div>
+       <div class="car">
+            <div class="car1"> <img src="./car.png" alt="" width="100%" height="150px" ></div>
+            <div class="wheel">
+                <img src="./Tiranga1.svg" alt="" width="50px" height="80px" class="flag">
+                <img src="./wheel.png" alt="" width="72px" height="72px" class="wheel1">
+                <img src="./wheel.png" alt="" width="72px" height="72px" class="wheel2">
+            </div>
+        </div>
+    </div>
+ </div>
+</body>
+</html> 

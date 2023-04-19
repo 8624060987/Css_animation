@@ -1,0 +1,160 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+.main{
+    /* width: 100%; */
+    /* max-height:max-content; */
+    background-color: hwb(58 22% 2% / 0.958);
+    display: flexbox;
+}
+.head{
+    text-align: center;
+    font-size:30px;
+}
+.skew-x{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding: 50px;
+}
+.num{
+    font-size: 30px;
+    padding-top: 80px;
+    justify-content: center;
+}
+.box{
+    width: 150px;
+    height: 150px;
+}
+.box1{
+   
+    background-color:rgb(110, 157, 193);
+    animation: skew-x 3s infinite alternate;
+
+}
+@keyframes skew-x{
+    0%{
+        /* by defult skew is x axis */
+        transform: skewX(-30deg);
+    }
+    100%{
+        transform: skewX(30deg);
+    }
+}
+
+.box2{
+    
+    background-color: rgb(90, 80, 109);
+
+    animation: skew-y 3s infinite alternate;
+}
+@keyframes skew-y{
+    0%{
+        
+        transform:skewy(-30deg);
+    }
+    100%{
+        transform: skewy(30deg);
+    }
+}
+
+.box3{
+   
+    background-color: rgb(110, 157, 193);
+    animation: rotate 3s infinite normal ;
+}
+@keyframes rotate{
+    0%{
+        transform: rotate(-360deg);
+    }  
+}
+.box4{
+   
+    background-color: rgb(110, 157, 193);
+    animation: scal-y 3s infinite alternate;
+    
+}
+@keyframes scal-y{
+    0%{
+        /* transform: scale(10%) */
+        transform: scaley(50px);
+    }
+    /* 50%{
+        transform: scaleY(50%);
+    } */
+    100%{
+        transform: scaley(50%);
+    }
+   
+}
+.box5{
+    background-color:brown;
+    animation: scal-x 3s infinite alternate;
+}
+@keyframes scal-x{
+    0%{
+        transform: scaleX(50px);
+    }
+    100%{
+        transform: scaleX(50%);
+    }
+}
+.box6{
+    background-color:darkolivegreen;
+    animation: rot 2s infinite alternate-reverse ;
+}
+@keyframes rot {
+    0%{
+        transform: rotate(90deg);
+    }
+}
+.refer{
+    font-size: 40px;
+    text-align: center;
+font-family: 'Times New Roman', Times, serif;
+}
+a:link{
+        color:rgba(79, 31, 129, 0.915);
+}
+
+
+/* iNDEX2 2ND PAGE CSS  */
+
+        .column{
+            display: flex;
+            justify-content: center;
+            
+        }
+       
+        .boxes{
+            width: 150px;
+            height: 150px;
+            background-color:rgb(70, 184, 70);
+            transition: all 2s ;
+            margin:20px;  
+        }
+        ol li{
+            font-size: 30px;
+        }
+        
+        .boxes:hover{
+            width: 600px;
+        }
+        .wid:hover{
+            height:500px;
+            width: 500px;
+        }
+
+.button{
+    padding: 10PX;
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    text-transform: uppercase;
+    font-weight: bolder;
+
+}        
+
+
+    
